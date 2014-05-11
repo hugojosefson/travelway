@@ -15,7 +15,7 @@ var paths = require('../paths');
  */
 gulp.task('client-css-bundle', ['bower'], function () {
     return merge(
-        gulp.src(paths.src.client.css).pipe(gulpif(isProduction, minifyCSS())),
+        require('./source-streams/angular-module-styles')().pipe(gulpif(isProduction, minifyCSS())),
         gulp.src(paths.src.client.bowerCssFilesToInclude)
     )
         .pipe(concat('bundle.css'))

@@ -15,7 +15,8 @@ var paths = require('../paths');
  */
 gulp.task('client-js-bundle', ['bower'], function () {
     return merge(
-        gulp.src(paths.src.client.js).pipe(gulpif(isProduction, uglify())),
+        require('./source-streams/angular-modules')().pipe(gulpif(isProduction, uglify())),
+        require('./source-streams/angular-module-templates')().pipe(gulpif(isProduction, uglify())),
         gulp.src(paths.src.client.bowerJsFilesToInclude)
     )
         .pipe(concat('bundle.js'))

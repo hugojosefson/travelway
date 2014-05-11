@@ -9,5 +9,6 @@ var gulp = require('gulp');
 gulp.task('client', [
     'client-js-bundle',
     'client-css-bundle',
-    'client-static'
+    'angular-module-non-js',
+    'client-non-angular-modules'
 ]);

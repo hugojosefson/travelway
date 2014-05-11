@@ -14,10 +14,12 @@ describe('meta', function () {
 
 describe('demo-app', function () {
     'use strict';
-    it('should NOT have require', function () {
-        expect(typeof require).to.not.equal('function');
+    it('should have module demoApp', function () {
+        expect(angular.module('demoApp')).to.not.be.null;
     });
-    it('should have angular', function () {
-        expect(typeof angular).to.not.equal('undefined');
+    it('should NOT have module asdasd', function () {
+        expect(function () {
+            angular.module('asdasd');
+        }).to.throw;
     });
 });

@@ -21,26 +21,37 @@ module.exports = {
         client: {
             bowerJsFilesToInclude: [
                 bowerDirectory + '/jquery/dist/jquery' + (isProduction ? '.min.js' : '.js'),
-                bowerDirectory + '/bootstrap/dist/js/bootstrap' + (isProduction ? '.min.js' : '.js')
+                bowerDirectory + '/bootstrap/dist/js/bootstrap' + (isProduction ? '.min.js' : '.js'),
+                bowerDirectory + '/angular/angular' + (isProduction ? '.min.js' : '.js'),
+                bowerDirectory + '/angular-route/angular-route' + (isProduction ? '.min.js' : '.js')
             ],
             bowerCssFilesToInclude: [
                 bowerDirectory + '/bootstrap/dist/css/bootstrap' + (isProduction ? '.min.css' : '.css'),
                 bowerDirectory + '/bootstrap/dist/css/bootstrap-theme' + (isProduction ? '.min.css' : '.css')
             ],
-            js: [
-                './client/**/*.js',
-                '!' + bowerDirectory + '/**',
-                '!./client/**/*-test.js'
+            modules: [
+                './client/modules/**/*.js',
+                '!./client/modules/**/*-test.js'
             ],
-            css: [
-                './client/**/*.css',
-                '!' + bowerDirectory + '/**'
+            moduleStyles: './client/modules/**/*.css',
+            moduleTemplates: './client/modules/**/*.html',
+            moduleNonJs: [
+                './client/modules/**',
+                '!./client/modules/**/*.html',
+                '!./client/modules/**/*.css',
+                '!./client/modules/**/*.js'
             ],
-            static: [
+            nonAngularModules: [
                 './client/**',
-                '!' + bowerDirectory + '/**',
-                '!./client/**/*.js',
-                '!./client/**/*.css'
+                '!./client/modules',
+                '!./client/modules/**'
+            ],
+            nonAngularModulesExceptBowerComponents: [
+                './client/**',
+                ('!./' + bowerDirectory),
+                ('!./' + bowerDirectory + '/**'),
+                '!./client/modules',
+                '!./client/modules/**'
             ]
         }
     },

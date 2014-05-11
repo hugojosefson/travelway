@@ -1,7 +1,13 @@
-# gulp-example-project -> bower
+# gulp-example-project -> angular
 
-Example implementation of a project structure using [gulp.js](http://gulpjs.com/) for the build, with dependencies
-downloaded using [Bower](http://bower.io/).
+Example implementation of a project structure suggested in the presentation [AngularJS, Practices for Large-scale
+Development of Web Apps](http://slides.com/hugojosefson/angularjs-practices-for-large-scale-development-of-web-apps),
+using [gulp.js](http://gulpjs.com/) for the build.
+
+This project structure uses a directory structure, which:
+
+  * doesn't keep files in directories according to their file types (html, css, scripts...)
+  * does keep a directory structure according to feature (login, landing-page, details...)
 
 ## Commands
 
@@ -35,8 +41,14 @@ npm run clean-build Clean out built files.
 /server/                        Server source code.
 /gulp/                          Gulp build for this project.
 
-/client/                        Client source code.
-/client/index.html              Where the client starts.
+/client/                             Client source code.
+/client/index.html                   Where the client starts.
+/client/modules/                     One directory under here for each AngularJS module.
+/client/modules/demo-app/            The main app module.
+/client/modules/demo-app/routes      Routes for the main app module.
+                                     Directory structure here maps directly to the URL structure.
+/client/modules/demo-app/components  Any other code in the main app module, not part of a specific route.
+                                     One directory per component. No nesting directories.
 ```
 
 ### Build artifacts and other .gitignore'd stuff

@@ -6,9 +6,13 @@
   "authors": [
     "Hugo Josefson <hugo@josefson.org>"
   ],
-  "description": "Example implementation of a project structure using gulp.js and Bower.",
+  "description": "Example AngularJS project, structured by feature rather than file-type. Build script using gulp.",
   "keywords": [
+    "angularjs",
     "gulp",
+    "by-feature",
+    "by",
+    "feature",
     "project",
     "structure",
     "template",
@@ -23,6 +27,11 @@
     "**/*-e2e.js"
   ],
   "dependencies": {
+    "angular": "~1.3.13",
+    "angular-route": "~1.3.13",
     "bootstrap": "~3.3.2"
+  },
+  "resolutions": {
+    "angular": "1.3.13"
   }
 }

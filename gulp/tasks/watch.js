@@ -40,9 +40,11 @@ gulp.task('browser-sync', ['server:start'], function () {
  * Watches for file changes, rebuilds.
  */
 gulp.task('watch', ['server:start', 'browser-sync'], function () {
-    gulp.watch(paths.src.client.js, ['client-js-bundle', browserSync.reload]);
-    gulp.watch(paths.src.client.css, ['client-css-bundle', browserSync.reload]);
-    gulp.watch(paths.src.client.static, ['client-static', browserSync.reload]);
-    gulp.watch(paths.src['bower-json'], ['bower', browserSync.reload]);
+    gulp.watch(paths.src.client.modules, ['client-js-bundle', browserSync.reload]);
+    gulp.watch(paths.src.client.moduleTemplates, ['client-js-bundle', browserSync.reload]);
+    gulp.watch(paths.src.client.moduleStyles, ['client-css-bundle', browserSync.reload]);
+    gulp.watch(paths.src.client.moduleNonJs, ['angular-module-non-js', browserSync.reload]);
+    gulp.watch(paths.src.client.nonAngularModulesExceptBowerComponents, ['client-non-angular-modules', browserSync.reload]);
+    gulp.watch(paths.src['bower-json'], ['client-non-angular-modules', browserSync.reload]);
     gulp.watch(paths.src.server, ['server:restart:browsersync']);
 });
