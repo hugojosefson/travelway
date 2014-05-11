@@ -1,0 +1,72 @@
+{
+  "name": "gulp-example-project",
+  "version": "0.0.1-alpha",
+  "private": true,
+  "description": "Example implementation of a project structure using gulp.js.",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "npm install && nodemon --exec \"npm run gulp\" --watch package.json --watch gulpfile.js --watch gulp --ignore .git --ignore .idea --ignore node_modules --ignore client --ignore dist --ignore server --ext js,json",
+    "gulp": "npm install && gulp",
+    "test": "npm install && gulp test",
+    "dist": "npm install && gulp dist --production",
+    "clean-all": "npm run clean-build && npm run clean-deps",
+    "clean-build": "npm install && gulp clean-build",
+    "clean-deps": "npm run clean-node_modules",
+    "clean-node_modules": "rm -rf node_modules"
+  },
+  "productionConfig": {
+    "description": "This configuration is for the built app, in production mode. ($(description))",
+    "main": "server.js",
+    "scripts": {
+      "start": "npm install --production && NODE_ENV=production node server.js"
+    },
+    "devDependencies": {}
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hugojosefson/gulp-example-project.git"
+  },
+  "keywords": [
+    "gulp",
+    "project",
+    "structure",
+    "template",
+    "example"
+  ],
+  "author": "Hugo Josefson <hugo@josefson.org> (http://about.me/hugojosefson)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hugojosefson/gulp-example-project/issues"
+  },
+  "homepage": "https://github.com/hugojosefson/gulp-example-project",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "dependencies": {
+    "express": "4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.2.1",
+    "chai": "^2.0.0",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.1",
+    "gulp-develop-server": "^0.2.5",
+    "gulp-if": "^1.2.5",
+    "gulp-ignore": "^1.2.1",
+    "gulp-minify-css": "^0.4.6",
+    "gulp-mocha": "^2.0.0",
+    "gulp-production-package-json": "^1.0.2",
+    "gulp-uglify": "^1.1.0",
+    "is-production": "^1.0.1",
+    "karma": "^0.12.31",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^0.1.10",
+    "karma-mocha-reporter": "^1.0.0",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "mocha": "^2.1.0",
+    "nodemon": "^1.3.7",
+    "phantomjs": "^1.9.15",
+    "run-sequence": "^1.0.2"
+  }
+}
