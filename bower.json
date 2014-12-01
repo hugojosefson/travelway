@@ -23,5 +23,6 @@
     "**/*-e2e.js"
   ],
   "dependencies": {
+    "bootstrap": "~3.3.2"
   }
 }

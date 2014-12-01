@@ -2,6 +2,7 @@
 'use strict';
 
 var fs = require('fs');
+var isProduction = require('is-production')();
 
 var string = fs.readFileSync('.bowerrc', {encoding: 'utf8'});
 var bowerDirectory = JSON.parse(string).directory;
@@ -19,16 +20,25 @@ module.exports = {
         ],
         client: {
             bowerJsFilesToInclude: [
+                bowerDirectory + '/jquery/dist/jquery' + (isProduction ? '.min.js' : '.js'),
+                bowerDirectory + '/bootstrap/dist/js/bootstrap' + (isProduction ? '.min.js' : '.js')
             ],
             bowerCssFilesToInclude: [
+                bowerDirectory + '/bootstrap/dist/css/bootstrap' + (isProduction ? '.min.css' : '.css'),
+                bowerDirectory + '/bootstrap/dist/css/bootstrap-theme' + (isProduction ? '.min.css' : '.css')
             ],
             js: [
                 './client/**/*.js',
+                '!' + bowerDirectory + '/**',
                 '!./client/**/*-test.js'
             ],
-            css: './client/**/*.css',
+            css: [
+                './client/**/*.css',
+                '!' + bowerDirectory + '/**'
+            ],
             static: [
                 './client/**',
+                '!' + bowerDirectory + '/**',
                 '!./client/**/*.js',
                 '!./client/**/*.css'
             ]
