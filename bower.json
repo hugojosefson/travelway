@@ -1,0 +1,27 @@
+{
+  "name": "gulp-example-project",
+  "version": "0.0.1-alpha",
+  "private": true,
+  "homepage": "https://github.com/hugojosefson/gulp-example-project",
+  "authors": [
+    "Hugo Josefson <hugo@josefson.org>"
+  ],
+  "description": "Example implementation of a project structure using gulp.js and Bower.",
+  "keywords": [
+    "gulp",
+    "project",
+    "structure",
+    "template",
+    "example"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "client/bower-components",
+    "**/*-test.js",
+    "**/*-e2e.js"
+  ],
+  "dependencies": {
+  }
+}

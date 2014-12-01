@@ -2,16 +2,18 @@
   "name": "gulp-example-project",
   "version": "0.0.1-alpha",
   "private": true,
-  "description": "Example implementation of a project structure using gulp.js.",
+  "description": "Example implementation of a project structure using gulp.js and Bower.",
   "main": "server/server.js",
   "scripts": {
-    "start": "npm install && nodemon --exec \"npm run gulp\" --watch package.json --watch gulpfile.js --watch gulp --ignore .git --ignore .idea --ignore node_modules --ignore client --ignore dist --ignore server --ext js,json",
+    "start": "npm install && nodemon --exec \"npm run gulp\" --watch package.json --watch gulpfile.js --watch gulp --ignore .git --ignore .idea --ignore node_modules --ignore client --ignore dist --ignore server --ignore bower.json --ext js,json",
     "gulp": "npm install && gulp",
     "test": "npm install && gulp test",
     "dist": "npm install && gulp dist --production",
+    "bower": "npm install && gulp bower",
     "clean-all": "npm run clean-build && npm run clean-deps",
     "clean-build": "npm install && gulp clean-build",
-    "clean-deps": "npm run clean-node_modules",
+    "clean-deps": "npm run clean-bower && npm run clean-node_modules",
+    "clean-bower": "npm install && gulp clean-bower",
     "clean-node_modules": "rm -rf node_modules"
   },
   "productionConfig": {
@@ -46,10 +48,12 @@
     "express": "4"
   },
   "devDependencies": {
+    "bower": "^1.3.12",
     "browser-sync": "^2.2.1",
     "chai": "^2.0.0",
     "del": "^1.1.1",
     "gulp": "^3.8.11",
+    "gulp-bower": "0.0.10",
     "gulp-concat": "^2.5.1",
     "gulp-develop-server": "^0.2.5",
     "gulp-if": "^1.2.5",
@@ -64,6 +68,8 @@
     "karma-mocha": "^0.1.10",
     "karma-mocha-reporter": "^1.0.0",
     "karma-phantomjs-launcher": "^0.1.4",
+    "merge-stream": "^0.1.7",
+    "minimist": "^1.1.0",
     "mocha": "^2.1.0",
     "nodemon": "^1.3.7",
     "phantomjs": "^1.9.15",

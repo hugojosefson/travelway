@@ -1,16 +1,27 @@
 /* jshint node: true */
 'use strict';
 
+var fs = require('fs');
+
+var string = fs.readFileSync('.bowerrc', {encoding: 'utf8'});
+var bowerDirectory = JSON.parse(string).directory;
+
 var serverTests = 'server/**/*-test.js';
 
 module.exports = {
+    'bower-directory': bowerDirectory + '/',
     src: {
         'package-json': 'package.json',
+        'bower-json': 'bower.json',
         server: [
             'server/**',
             '!' + serverTests
         ],
         client: {
+            bowerJsFilesToInclude: [
+            ],
+            bowerCssFilesToInclude: [
+            ],
             js: [
                 './client/**/*.js',
                 '!./client/**/*-test.js'
@@ -37,7 +48,8 @@ module.exports = {
         }
     },
     clean: {
-        build: 'dist/**'
+        build: 'dist/**',
+        bower: bowerDirectory + '/**'
     },
     watch: {
         server: [

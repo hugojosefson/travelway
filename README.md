@@ -1,6 +1,7 @@
-# gulp-example-project -> base
+# gulp-example-project -> bower
 
-Example implementation of a project structure using [gulp.js](http://gulpjs.com/) for the build.
+Example implementation of a project structure using [gulp.js](http://gulpjs.com/) for the build, with dependencies
+downloaded using [Bower](http://bower.io/).
 
 ## Commands
 
@@ -47,4 +48,5 @@ npm run clean-build Clean out built files.
 /dist/client/               Client webapp.
 
 /node_modules/              npm packages for the gulp build.
+/client/bower-components/   Libraries downloaded by Bower.
 ```
