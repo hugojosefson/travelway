@@ -3,16 +3,7 @@ angular.module('demoApp').config(function ($routeProvider) {
 
     $routeProvider
         .when('/', {
-            templateUrl: 'modules/demo-app/routes/root/root.html'
-        })
-        .when('/greeting', {
-            templateUrl: 'modules/demo-app/routes/greeting/greeting.html'
-        })
-        .when('/todo', {
-            templateUrl: 'modules/demo-app/routes/todo/list.html'
-        })
-        .when('/todo/:index', {
-            templateUrl: 'modules/demo-app/routes/todo/details.html'
+            redirectTo: '/events'
         })
         .when('/events', {
             templateUrl: 'modules/demo-app/routes/events/list.html'
