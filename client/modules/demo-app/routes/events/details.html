@@ -16,10 +16,17 @@
                     <br/><br/>
 
                     <label for="location">Location</label>
-                    <input id="location" ng-model="events.item.location"/>
+                    <location-lookup id="location"
+                                     ng-show="!events.item.location"
+                                     ng-model="events.location"
+                                     limit-to="4"></location-lookup>
+                    <input
+                           ng-show="events.item.location"
+                           ng-model="events.location.description"
+                           ng-click="events.clearLocation()"/>
                     <br/><br/>
 
-                    <button type="submit" ng-click="">Create event</button>
+                    <button type="submit" ng-click="events.save(events.item)">Create event</button>
 
                 </form>
             </div>

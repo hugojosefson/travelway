@@ -61,6 +61,23 @@ body {
     vertical-align:top;
 }
 
+.createEventBody .search-box {
+    display: inline;
+}
+
+.createEventBody ul {
+    list-style-type: none;
+}
+
+.createEventBody li {
+    margin-left: 213px;
+}
+
+.createEventBody li:hover {
+    background-color: #a9cf54;
+    font-weight: 600;
+}
+
 .createEventBody input {
     height:24px;
     width:300px;
