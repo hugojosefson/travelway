@@ -24,10 +24,11 @@ paths:
     get:
       summary: Trips for specific customer
       parameters:
-      - name: customer_id
-        in: path
-        type: string
-        description: asd
+        - name: customer_id
+          in: path
+          required: true
+          type: string
+          description: asd
       responses:
         '200':
           description: An array of trips for the specific customer
@@ -41,10 +42,16 @@ paths:
       description: |
         The Travellers endpoint returns information about the people who will be travelling. The response includes the email address, full name and mobile phone number of each traveller.
       parameters:
-        - name: customer
-          in: query
-          required: false
+        - name: customer_id
+          in: path
+          required: true
           type: string
+          description: id of the customer
+        - name: trip_id
+          in: path
+          required: true
+          type: string
+          description: id of the trip
       responses:
         '200':
           description: An array of travellers
