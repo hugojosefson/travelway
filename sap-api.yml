@@ -42,10 +42,6 @@ paths:
             type: array
             items:
               $ref: '#/definitions/Traveller'
-        default:
-          description: Unexpected error.
-          schema:
-            $ref: '#/definitions/Error'
 definitions:
   Customer:
     type: object
@@ -74,9 +70,9 @@ definitions:
       end_datetime:
         type: string
         description: RFC3339 full datetime for when the trip ends.
-      traveller_ids:
+      traveller_emails:
         type: array
-        description: Id of all travellers on this trip
+        description: Email address of all travellers on this trip
         items:
           type: string
   Traveller:
@@ -94,13 +90,3 @@ definitions:
       mobile_phone:
         type: string
         description: Mobile phone number to the traveller.
-  Error:
-    type: object
-    properties:
-      code:
-        type: integer
-        format: int32
-      message:
-        type: string
-      fields:
-        type: string
