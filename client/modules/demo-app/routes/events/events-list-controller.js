@@ -1,5 +1,10 @@
-angular.module('demoApp').controller('EventsListController', function (eventsItems) {
+angular.module('demoApp').controller('EventsListController', function (Event) {
     'use strict';
 
-    this.items = eventsItems;
+    var self = this;
+
+    Event.query().then(function (events) {
+        self.items = events;
+
+    })
 });
