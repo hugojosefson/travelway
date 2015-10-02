@@ -1,0 +1,17 @@
+<div ng-controller="EventsListController as events">
+    <h1>Events</h1>
+
+    <form>
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="item in events.items">
+                <input type="checkbox" ng-model="item.done"/>
+                <a href="#/events/{{$index}}" ng-class="{'done': item.done}">
+                    {{ item.title }}
+                </a>
+            </li>
+        </ul>
+    </form>
+
+    <hr/>
+    <a href="#/">Back</a>
+</div>

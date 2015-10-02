@@ -1,0 +1,35 @@
+<div ng-controller="EventsItemController as events">
+    <h1>Event</h1>
+
+    <form role="form">
+        <div class="form-group">
+            <label>
+                Title
+                <input
+                        ng-model="events.item.title"
+                        ng-class="{'done': events.item.done}"
+                        class="form-control"
+                        />
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                Description
+                <textarea
+                        ng-model="events.item.description"
+                        ng-class="{'done': events.item.done}"
+                        class="form-control"
+                        ></textarea>
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" ng-model="events.item.done"/>
+                Done
+            </label>
+        </div>
+    </form>
+
+    <hr/>
+    <a href="#/events">Back</a>
+</div>
