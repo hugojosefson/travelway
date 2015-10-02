@@ -1,3 +1,3 @@
 angular.module('demoApp').factory 'Event', (Parse) ->
     class Event extends Parse.Model
-        @configure 'Event', 'name', 'location', 'imageKey'
+        @configure 'Event', 'name', 'location', 'imageKey', 'time', 'numberOfParticipants'
