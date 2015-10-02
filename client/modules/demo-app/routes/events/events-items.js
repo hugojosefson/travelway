@@ -1,5 +1,4 @@
 angular.module('demoApp').value('eventsItems', [
-    {title: 'Set up git repo', done: true},
-    {title: 'Write tests'},
-    {title: 'Buy soy milk'}
+    {name: 'Climb the Eiffel tower'},
+    {name: 'Visit the Louvre'}
 ]);

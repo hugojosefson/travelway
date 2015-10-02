@@ -4,9 +4,8 @@
     <form>
         <ul class="list-group">
             <li class="list-group-item" ng-repeat="item in events.items">
-                <input type="checkbox" ng-model="item.done"/>
-                <a href="#/events/{{$index}}" ng-class="{'done': item.done}">
-                    {{ item.title }}
+                <a href="#/events/{{$index}}">
+                    {{ item.name }}
                 </a>
             </li>
         </ul>
