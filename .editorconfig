@@ -13,6 +13,11 @@ insert_final_newline = false
 indent_style = space
 indent_size = 4
 
+# yml 2 space indentation
+[*.yml]
+indent_style = space
+indent_size = 2
+
 # Indentation override for files handled by their tools
 [{package.json,bower.json}]
 indent_style = space
