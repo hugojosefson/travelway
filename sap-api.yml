@@ -13,6 +13,13 @@ paths:
   /customers:
     get:
       summary: Customers
+      parameters:
+        - name: updated_since
+          in: query
+          type: string
+          format: dateTime
+          required: false
+          description: Instructs the server to only return items which have any changes since this specified datetime
       responses:
         '200':
           description: An array of customers.
@@ -25,6 +32,13 @@ paths:
       summary: All travellers
       description: |
         The Travellers endpoint returns information about the people who will be travelling. The response includes the email address, full name and mobile phone number of each traveller.
+      parameters:
+        - name: updated_since
+          in: query
+          type: string
+          format: dateTime
+          required: false
+          description: Instructs the server to only return items which have any changes since this specified datetime
       responses:
         '200':
           description: An array of travellers.
@@ -35,6 +49,13 @@ paths:
   /trips:
     get:
       summary: All trips
+      parameters:
+        - name: updated_since
+          in: query
+          type: string
+          format: dateTime
+          required: false
+          description: Instructs the server to only return items which have any changes since this specified datetime
       responses:
         '200':
           description: An array of all trips.
