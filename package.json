@@ -5,7 +5,7 @@
   "description": "Travelway web app",
   "main": "server/server.js",
   "scripts": {
-    "start": "npm install && nodemon --exec \"npm run gulp\" --watch package.json --watch gulpfile.js --watch gulp --ignore .git --ignore .idea --ignore node_modules --ignore client --ignore dist --ignore server --ignore bower.json --ext js,json",
+    "start": "npm install && nodemon --exec \"gulp\" --watch gulpfile.js --watch gulp --ignore .git --ignore .idea --ignore node_modules --ignore client --ignore dist --ignore server --ignore bower.json --ext js,json",
     "gulp": "npm install && gulp",
     "test": "npm install && gulp test",
     "dist": "npm install && gulp dist --production",
