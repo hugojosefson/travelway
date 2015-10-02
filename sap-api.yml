@@ -1,7 +1,7 @@
 swagger: '2.0'
 info:
   title: Travelway SAP integration
-  description: Specification for integrating social mobile apps with Travelway SAP
+  description: Specification for integrating social mobile apps with Travelway SAP.
   version: 1.0.0
 host: api.sap.travelway.com
 schemes:
@@ -15,7 +15,7 @@ paths:
       summary: Customers
       responses:
         '200':
-          description: An array of customers
+          description: An array of customers.
           schema:
             type: array
             items:
@@ -28,10 +28,10 @@ paths:
           in: path
           required: true
           type: string
-          description: asd
+          description: id of the customer.
       responses:
         '200':
-          description: An array of trips for the specific customer
+          description: An array of trips for the specific customer.
           schema:
             type: array
             items:
@@ -46,21 +46,21 @@ paths:
           in: path
           required: true
           type: string
-          description: id of the customer
+          description: id of the customer.
         - name: trip_id
           in: path
           required: true
           type: string
-          description: id of the trip
+          description: id of the trip.
       responses:
         '200':
-          description: An array of travellers
+          description: An array of travellers.
           schema:
             type: array
             items:
               $ref: '#/definitions/Traveller'
         default:
-          description: Unexpected error
+          description: Unexpected error.
           schema:
             $ref: '#/definitions/Error'
 definitions:
@@ -69,25 +69,25 @@ definitions:
     properties:
       id:
         type: string
-        description: SAP identifier for this customer
+        description: SAP identifier for this customer.
       name:
         type: string
-        description: Customer name
+        description: Customer name.
   Trip:
     type: object
     properties:
       id:
         type: string
-        description: SAP identifier for this trip
+        description: SAP identifier for this trip.
       name:
         type: string
-        description: Name of the trip
+        description: Name of the trip.
       start_datetime:
         type: string
-        description: RFC3339 full datetime for when the trip starts
+        description: RFC3339 full datetime for when the trip starts.
       end_datetime:
         type: string
-        description: RFC3339 full datetime for when the trip ends
+        description: RFC3339 full datetime for when the trip ends.
   Traveller:
     type: object
     properties:
