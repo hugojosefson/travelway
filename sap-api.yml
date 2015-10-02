@@ -1,0 +1,105 @@
+swagger: '2.0'
+info:
+  title: Travelway SAP integration
+  description: Specification for integrating social mobile apps with Travelway SAP
+  version: 1.0.0
+host: api.sap.travelway.com
+schemes:
+  - https
+basePath: /v1
+produces:
+  - application/json
+paths:
+  /customers:
+    get:
+      summary: Customers
+      responses:
+        '200':
+          description: An array of customers
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Customer'
+  /customers/{customer_id}/trips:
+    get:
+      summary: Trips for specific customer
+      parameters:
+      - name: customer_id
+        in: path
+        type: string
+        description: asd
+      responses:
+        '200':
+          description: An array of trips for the specific customer
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Trip'
+  /customers/{customer_id}/trips/{trip_id}/travellers:
+    get:
+      summary: Travellers in a specific trip
+      description: |
+        The Travellers endpoint returns information about the people who will be travelling. The response includes the email address, full name and mobile phone number of each traveller.
+      parameters:
+        - name: customer
+          in: query
+          required: false
+          type: string
+      responses:
+        '200':
+          description: An array of travellers
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Traveller'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  Customer:
+    type: object
+    properties:
+      id:
+        type: string
+        description: SAP identifier for this customer
+      name:
+        type: string
+        description: Customer name
+  Trip:
+    type: object
+    properties:
+      id:
+        type: string
+        description: SAP identifier for this trip
+      name:
+        type: string
+        description: Name of the trip
+      start_datetime:
+        type: string
+        description: RFC3339 full datetime for when the trip starts
+      end_datetime:
+        type: string
+        description: RFC3339 full datetime for when the trip ends
+  Traveller:
+    type: object
+    properties:
+      email:
+        type: string
+        description: Email address of the traveller.
+      full_name:
+        type: string
+        description: Full name of the traveller.
+      mobile_phone:
+        type: string
+        description: Mobile phone number to the traveller.
+  Error:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
+      fields:
+        type: string
