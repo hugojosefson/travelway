@@ -1,12 +1,12 @@
 {
-  "name": "gulp-example-project",
+  "name": "travelway",
   "version": "0.0.1-alpha",
   "private": true,
-  "homepage": "https://github.com/hugojosefson/gulp-example-project",
+  "homepage": "https://github.com/hugojosefson/travelway",
   "authors": [
     "Hugo Josefson <hugo@josefson.org>"
   ],
-  "description": "Example AngularJS project, structured by feature rather than file-type. Build script using gulp.",
+  "description": "Travelway web app",
   "keywords": [
     "angularjs",
     "gulp",

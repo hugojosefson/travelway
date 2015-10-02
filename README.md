@@ -1,4 +1,4 @@
-# gulp-example-project -> angular
+# travelway -> angular
 
 Example implementation of a project structure suggested in the presentation [AngularJS, Practices for Large-scale
 Development of Web Apps](http://slides.com/hugojosefson/angularjs-practices-for-large-scale-development-of-web-apps),

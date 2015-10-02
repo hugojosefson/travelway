@@ -1,8 +1,8 @@
 {
-  "name": "gulp-example-project",
+  "name": "travelway",
   "version": "0.0.1-alpha",
   "private": true,
-  "description": "Example AngularJS project, structured by feature rather than file-type. Build script using gulp.js.",
+  "description": "Travelway web app",
   "main": "server/server.js",
   "scripts": {
     "start": "npm install && nodemon --exec \"npm run gulp\" --watch package.json --watch gulpfile.js --watch gulp --ignore .git --ignore .idea --ignore node_modules --ignore client --ignore dist --ignore server --ignore bower.json --ext js,json",
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hugojosefson/gulp-example-project.git"
+    "url": "git://github.com/hugojosefson/travelway.git"
   },
   "keywords": [
     "angularjs",
@@ -42,11 +42,11 @@
   "author": "Hugo Josefson <hugo@josefson.org> (http://about.me/hugojosefson)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hugojosefson/gulp-example-project/issues"
+    "url": "https://github.com/hugojosefson/travelway/issues"
   },
-  "homepage": "https://github.com/hugojosefson/gulp-example-project",
+  "homepage": "https://github.com/hugojosefson/travelway",
   "engines": {
-    "node": "0.12"
+    "node": "4.1.1"
   },
   "dependencies": {
     "express": "4"
