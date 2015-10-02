@@ -40,7 +40,8 @@ gulp.task('browser-sync', ['server:start'], function () {
  * Watches for file changes, rebuilds.
  */
 gulp.task('watch', ['server:start', 'browser-sync'], function () {
-    gulp.watch(paths.src.client.modules, ['client-js-bundle', browserSync.reload]);
+    gulp.watch(paths.src.client.modulesJs, ['client-js-bundle', browserSync.reload]);
+    gulp.watch(paths.src.client.modulesCoffee, ['client-js-bundle', browserSync.reload]);
     gulp.watch(paths.src.client.moduleTemplates, ['client-js-bundle', browserSync.reload]);
     gulp.watch(paths.src.client.moduleStyles, ['client-css-bundle', browserSync.reload]);
     gulp.watch(paths.src.client.moduleNonJs, ['angular-module-non-js', browserSync.reload]);
