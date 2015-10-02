@@ -10,10 +10,10 @@ angular.module('demoApp').controller('EventsItemController', function (eventsIte
     }, function (newValue) {
         if (typeof newValue === 'string') {
             self.item = self.item || {};
-            self.item.location = {
+            self.item.location = new Parse.GeoPoint({
                 longitude: self.location.longitude,
                 latitude: self.location.latitude
-            };
+            });
         }
     });
 
