@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TravelWay admin - Create event</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="createEventView">
+      <div class="header">
+        <h1>Create event</h1>
+      </div>
+      <div class="createEventBody">
+        <form>
+          <label>
+            Event name
+          </label>
+          <input type="text" name="name">
+          <br/><br/>
+
+          <label>
+            Time
+          </label>
+          <input class="date" type="date" name="eventTime">
+          <br/><br/>
+
+          <label>
+            Description
+          </label>
+          <textarea name="description"></textarea>
+          <br/><br/>
+
+          <label>
+            Maximum participant count
+          </label>
+          <input class="number" type="number" name="maxNumParticipants">
+          <br/><br/>
+          <button type="submit" value="Submit">Create event</button>
+          
+        </form>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
