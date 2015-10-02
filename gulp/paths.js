@@ -18,11 +18,14 @@ module.exports = {
         client: {
             bowerJsFilesToInclude: [
                 bowerDirectory + '/jquery/dist/jquery' + (isProduction ? '.min.js' : '.js'),
+                bowerDirectory + '/bootstrap/dist/js/bootstrap' + (isProduction ? '.min.js' : '.js'),
                 bowerDirectory + '/angular/angular' + (isProduction ? '.min.js' : '.js'),
                 bowerDirectory + '/angular-route/angular-route' + (isProduction ? '.min.js' : '.js'),
                 bowerDirectory + '/angular-parse/angular-parse.js'
             ],
             bowerCssFilesToInclude: [
+                bowerDirectory + '/bootstrap/dist/css/bootstrap' + (isProduction ? '.min.css' : '.css'),
+                bowerDirectory + '/bootstrap/dist/css/bootstrap-theme' + (isProduction ? '.min.css' : '.css')
             ],
             modulesJs: [
                 './client/modules/**/*.js'
