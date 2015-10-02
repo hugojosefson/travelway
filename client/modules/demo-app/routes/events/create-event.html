@@ -1,38 +1,36 @@
 <div ng-controller="EventsItemController as events">
-    <div class="container">
-        <div class="createEventView">
-            <div class="header">
-                <h1>Create event</h1>
-            </div>
-            <div class="createEventBody">
-
-                <form role="form">
-                    <label for="name">Event name</label>
-                    <input id="name" ng-model="events.item.name"/>
-                    <br/><br/>
-
-                    <label for="time">Time</label>
-                    <input id="time" ng-model="events.item.time"/>
-                    <br/><br/>
-
-                    <label for="location">Location</label>
-                    <location-lookup id="location"
-                                     ng-show="!events.item.location"
-                                     ng-model="events.location"
-                                     limit-to="4"></location-lookup>
-                    <input
-                           ng-show="events.item.location"
-                           ng-model="events.location.description"
-                           ng-click="events.clearLocation()"/>
-                    <br/><br/>
-
-                    <input type="hidden" ng-model="events.item.imageKey" ng-init="events.item.imageKey='eiffel'"/>
-
-                    <button type="submit" ng-click="events.save(events.item)">Create event</button>
-
-                </form>
-            </div>
-
+    <div class="createEventView">
+        <div class="header">
+            <h1>Create event</h1>
         </div>
+        <div class="createEventBody">
+
+            <form role="form">
+                <label for="name">Event name</label>
+                <input id="name" ng-model="events.item.name"/>
+                <br/><br/>
+
+                <label for="time">Time</label>
+                <input id="time" ng-model="events.item.time"/>
+                <br/><br/>
+
+                <label for="location">Location</label>
+                <location-lookup id="location"
+                                 ng-show="!events.item.location"
+                                 ng-model="events.location"
+                                 limit-to="4"></location-lookup>
+                <input
+                    ng-show="events.item.location"
+                    ng-model="events.location.description"
+                    ng-click="events.clearLocation()"/>
+                <br/><br/>
+
+                <input type="hidden" ng-model="events.item.imageKey" ng-init="events.item.imageKey='eiffel'"/>
+
+                <button type="submit" ng-click="events.save(events.item)">Create event</button>
+
+            </form>
+        </div>
+
     </div>
 </div>
