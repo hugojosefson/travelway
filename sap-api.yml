@@ -20,38 +20,21 @@ paths:
             type: array
             items:
               $ref: '#/definitions/Customer'
-  /customers/{customer_id}/trips:
+  /trips:
     get:
-      summary: Trips for specific customer
-      parameters:
-        - name: customer_id
-          in: path
-          required: true
-          type: string
-          description: id of the customer.
+      summary: All trips
       responses:
         '200':
-          description: An array of trips for the specific customer.
+          description: An array of all trips.
           schema:
             type: array
             items:
               $ref: '#/definitions/Trip'
-  /customers/{customer_id}/trips/{trip_id}/travellers:
+  /travellers:
     get:
-      summary: Travellers in a specific trip
+      summary: All travellers
       description: |
         The Travellers endpoint returns information about the people who will be travelling. The response includes the email address, full name and mobile phone number of each traveller.
-      parameters:
-        - name: customer_id
-          in: path
-          required: true
-          type: string
-          description: id of the customer.
-        - name: trip_id
-          in: path
-          required: true
-          type: string
-          description: id of the trip.
       responses:
         '200':
           description: An array of travellers.
@@ -79,6 +62,9 @@ definitions:
       id:
         type: string
         description: SAP identifier for this trip.
+      customer_id:
+        type: string
+        description: The id of the customer this trip belongs to.
       name:
         type: string
         description: Name of the trip.
@@ -88,12 +74,20 @@ definitions:
       end_datetime:
         type: string
         description: RFC3339 full datetime for when the trip ends.
+      traveller_ids:
+        type: array
+        description: Id of all travellers on this trip
+        items:
+          type: string
   Traveller:
     type: object
     properties:
       email:
         type: string
         description: Email address of the traveller.
+      customer_id:
+        type: string
+        description: The id of the customer this traveller belongs to.
       full_name:
         type: string
         description: Full name of the traveller.
