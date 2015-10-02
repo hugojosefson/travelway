@@ -26,6 +26,8 @@
                            ng-click="events.clearLocation()"/>
                     <br/><br/>
 
+                    <input type="hidden" ng-model="events.item.imageKey" ng-init="events.item.imageKey='eiffel'"/>
+
                     <button type="submit" ng-click="events.save(events.item)">Create event</button>
 
                 </form>
