@@ -20,16 +20,6 @@ paths:
             type: array
             items:
               $ref: '#/definitions/Customer'
-  /trips:
-    get:
-      summary: All trips
-      responses:
-        '200':
-          description: An array of all trips.
-          schema:
-            type: array
-            items:
-              $ref: '#/definitions/Trip'
   /travellers:
     get:
       summary: All travellers
@@ -42,6 +32,16 @@ paths:
             type: array
             items:
               $ref: '#/definitions/Traveller'
+  /trips:
+    get:
+      summary: All trips
+      responses:
+        '200':
+          description: An array of all trips.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Trip'
 definitions:
   Customer:
     type: object
@@ -52,6 +52,21 @@ definitions:
       name:
         type: string
         description: Customer name.
+  Traveller:
+    type: object
+    properties:
+      email:
+        type: string
+        description: Email address of the traveller.
+      customer_id:
+        type: string
+        description: The id of the customer this traveller belongs to.
+      full_name:
+        type: string
+        description: Full name of the traveller.
+      mobile_phone:
+        type: string
+        description: Mobile phone number to the traveller.
   Trip:
     type: object
     properties:
@@ -75,18 +90,3 @@ definitions:
         description: Email address of all travellers on this trip
         items:
           type: string
-  Traveller:
-    type: object
-    properties:
-      email:
-        type: string
-        description: Email address of the traveller.
-      customer_id:
-        type: string
-        description: The id of the customer this traveller belongs to.
-      full_name:
-        type: string
-        description: Full name of the traveller.
-      mobile_phone:
-        type: string
-        description: Mobile phone number to the traveller.
