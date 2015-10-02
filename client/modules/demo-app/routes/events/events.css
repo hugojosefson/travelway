@@ -1,3 +1,99 @@
-.done {
-    text-decoration: line-through;
+@font-face {
+    font-family: "robotoLight";
+    src: url("/fonts/Roboto-Light-webfont.woff") format('woff');
+}
+
+@font-face {
+    font-family: "robotoBold";
+    src: url("/fonts/Roboto-Bold-webfont.woff") format('woff');
+}
+
+html {
+    min-height:100%;
+}
+
+body {
+    min-height:100%;
+}
+
+.container {
+    margin-top:100px;
+    margin-left:auto;
+    margin-right:auto;
+    max-width:900px;
+}
+
+.createEventView {
+    width:900px;
+    -webkit-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+
+    font-family: "robotoLight";
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.createEventBody {
+    background-color: #ffffff;
+    min-height:200px;
+    padding-bottom:24px;
+    padding-top:24px;
+}
+
+.header {
+    background-color: #a9cf54;
+    padding-top:4px;
+    padding-left: 24px;
+    padding-right:16px;
+    padding-bottom:4px;
+}
+
+.header h1 {
+    font-size: 18pt;
+    font-family: "robotoBold";
+    color:black;
+}
+
+.createEventBody label{
+    width: 250px;
+    display:inline-block;
+    vertical-align:top;
+}
+
+.createEventBody input {
+    height:24px;
+    width:300px;
+    font-size: 12pt;
+}
+
+.createEventBody .number {
+    height:24px;
+    width:100px;
+    font-size: 12pt;
+}
+
+.createEventBody .date {
+    height:24px;
+    font-size: 12pt;
+}
+
+.createEventBody button {
+    height:40px;
+    font-size: 12pt;
+    float:right;
+}
+
+.createEventBody form {
+    margin-left:auto;
+    margin-right:auto;
+    width:800px;
+    border:none;
+    overflow:hidden;
+}
+
+.createEventBody textarea {
+    width:300px;
+    height:150px;
+    vertical-align: bottom;
 }
