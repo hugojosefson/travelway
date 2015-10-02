@@ -7,7 +7,7 @@
   "scripts": {
     "start": "nodemon --exec \"gulp\" --watch gulpfile.js --watch gulp --ignore .git --ignore .idea --ignore node_modules --ignore client --ignore dist --ignore server --ignore bower.json --ext js,json",
     "gulp": "npm install && gulp",
-    "test": "npm install && gulp test",
+    "test": "echo no tests.",
     "dist": "npm install && gulp dist --production",
     "bower": "npm install && gulp bower",
     "clean-all": "npm run clean-build && npm run clean-deps",

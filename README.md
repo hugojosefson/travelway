@@ -15,7 +15,6 @@ This project structure uses a directory structure, which:
 
 ```
 npm start           Build and run the built app.
-npm test            Run unit and e2e tests.
 
 npm run dist        Build the app into the dist/ directory.
 
