@@ -1,4 +1,4 @@
-angular.module('demoApp').controller('EventsItemController', function (Event, $routeParams, $scope) {
+angular.module('demoApp').controller('EventsItemController', function (Event, Parse, $routeParams, $scope) {
     'use strict';
     var self = this;
 
