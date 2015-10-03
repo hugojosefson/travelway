@@ -3,7 +3,7 @@ angular.module('demoApp').config(function ($routeProvider) {
 
     $routeProvider
         .when('/', {
-            redirectTo: '/events'
+            templateUrl: 'modules/demo-app/routes/root/root.html'
         })
         .when('/events', {
             templateUrl: 'modules/demo-app/routes/events/list.html'
