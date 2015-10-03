@@ -110,3 +110,16 @@ body {
     height:150px;
     vertical-align: bottom;
 }
+
+.header-links {
+    position: absolute;
+    margin-top: -23px;
+    margin-left: 750px;
+    font-weight: bold;
+    font-size: 10pt;
+    color: black;
+}
+
+.header-links a:visited, .header-links a:link {
+    color: black;
+}
