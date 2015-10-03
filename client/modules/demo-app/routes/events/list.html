@@ -2,20 +2,20 @@
     <h1>Events</h1>
 
     <form>
-        <p>
-            <a href="#/events/new">Create event</a>
-        </p>
         <ul class="list-group">
             <li class="list-group-item" ng-repeat="item in events.items">
                 <a href="#/events/{{$index}}">
                     {{ item.name }}
                 </a>
-                <button type="button" class="btn btn-default btn-xs" ng-click="events.delete(item)" style="float: right">
+                <button type="button" class="btn btn-default btn-xs" ng-click="events.delete(item)"
+                        style="float: right">
                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                 </button>
             </li>
         </ul>
+        <div>
+            <a href="#/events/new" class="btn btn-default">Create event</a>
+        </div>
     </form>
 
-    <hr/>
 </div>
