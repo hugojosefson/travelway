@@ -1,19 +1,14 @@
-# travelway -> angular
+# travelway
 
-Example implementation of a project structure suggested in the presentation [AngularJS, Practices for Large-scale
-Development of Web Apps](http://slides.com/hugojosefson/angularjs-practices-for-large-scale-development-of-web-apps),
-using [gulp.js](http://gulpjs.com/) for the build.
-
-This project structure uses a directory structure, which:
-
-  * doesn't keep files in directories according to their file types (html, css, scripts...)
-  * does keep a directory structure according to feature (login, landing-page, details...)
+One part of a prototype, developed during an exercise in rapid prototyping and iteration. 
 
 ## Commands
 
 ### Recommended
 
 ```
+npm install         Install needed dependencies.
+
 npm start           Build and run the built app.
 
 npm run dist        Build the app into the dist/ directory.
