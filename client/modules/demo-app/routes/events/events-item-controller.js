@@ -10,7 +10,7 @@ angular.module('demoApp').controller('EventsItemController', function (Event, $r
             console.log('this is new');
             self.item = new Event({
                 numberOfParticipants: 0,
-                imageKey: 'eiffel'
+                imageKey: 'zlatan'
             });
             console.log('created self.item', self.item);
         } else {
