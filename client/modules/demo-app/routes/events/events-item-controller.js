@@ -12,8 +12,12 @@ angular.module('demoApp').controller('EventsItemController', function (Event, $r
                 numberOfParticipants: 0,
                 imageKey: 'zlatan'
             });
+            self.header = 'Create event';
+            self.buttonText = 'Create event';
             console.log('created self.item', self.item);
         } else {
+            self.header = 'Edit event';
+            self.buttonText = 'Save event';
             console.log('loaded self.item', self.item);
         }
 
