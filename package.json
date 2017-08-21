@@ -39,14 +39,14 @@
     "template",
     "example"
   ],
-  "author": "Hugo Josefson <hugo@josefson.org> (http://about.me/hugojosefson)",
+  "author": "Hugo Josefson <hugo@josefson.org> (https://www.hugojosefson.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hugojosefson/travelway/issues"
   },
   "homepage": "https://github.com/hugojosefson/travelway",
   "engines": {
-    "node": "4.1.1"
+    "node": ">=4.8.4"
   },
   "dependencies": {
     "express": "4"
